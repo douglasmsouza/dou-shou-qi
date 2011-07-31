@@ -1,57 +1,11 @@
 package model;
 
 import java.io.Serializable;
-import javax.swing.ImageIcon;
 
+public class Lobo extends Peca implements Serializable {
 
-public class Lobo implements Peca,Serializable{
-	
-	@Override
-	public boolean estaNaArmadilha() {
-		return estaNaArmadilha;
+	public Lobo(int jogador) {
+		super("imagens/lobo" + jogador + ".png", jogador, 4, true, "lobo");
 	}
 
-	private ImageIcon imagem;
-	private int jogador;	
-	private boolean estaNaArmadilha;
-	
-	public Lobo(int jogador) {			
-		this.jogador = jogador;
-		setImagem("imagens/lobo"+jogador+".png");
-		estaNaArmadilha = false;
-	}
-
-	public int getForca() {		
-		return 4;
-	}
-	
-	public ImageIcon getImagem() {		
-		return imagem;
-	}
-	
-	@Override
-	public int getJogador() {
-		return jogador;
-	}
-	
-	@Override
-	public String getNome() {
-		return "lobo";
-	}
-	
-	@Override
-	public boolean isAnimal() {
-		return true;
-	}
-
-	@Override
-	public void estaNaArmadilha(boolean flag) {
-		estaNaArmadilha = flag;
-	}
-	
-	@Override
-	public void setImagem(String path) {
-		imagem = new ImageIcon(path);
-	}
 }
-

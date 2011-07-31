@@ -1,55 +1,10 @@
 package model;
 
 import java.io.Serializable;
-import javax.swing.ImageIcon;
 
+public class Leao extends Peca implements Serializable {
 
-public class Leao implements Peca,Serializable{	
-	
-	@Override
-	public boolean estaNaArmadilha() {
-		return estaNaArmadilha;
-	}
-
-	private ImageIcon imagem;
-	private int jogador;
-	private boolean estaNaArmadilha;
-	
-	public Leao(int jogador){		
-		this.jogador = jogador;
-		setImagem("imagens/leao"+jogador+".png");
-		estaNaArmadilha = false;
-	}
-	
-	public int getForca() {
-		return 7;
-	}
-	
-	public ImageIcon getImagem() {
-		return imagem;
-	}
-	
-	@Override
-	public int getJogador() {
-		return jogador;
-	}
-	
-	@Override
-	public String getNome() {
-		return "leão";
-	}
-	
-	@Override
-	public boolean isAnimal() {
-		return true;
-	}
-	@Override
-	public void estaNaArmadilha(boolean flag) {
-		estaNaArmadilha = flag;
-	}
-	
-	@Override
-	public void setImagem(String path) {
-		imagem = new ImageIcon(path);
+	public Leao(int jogador) {
+		super("imagens/leao" + jogador + ".png", jogador, 7, true, "leão");
 	}
 }
