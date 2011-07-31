@@ -6,7 +6,19 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 
-import model.*;
+import model.Armadilha;
+import model.Cao;
+import model.Elefante;
+import model.Gato;
+import model.Grama;
+import model.Lago;
+import model.Leao;
+import model.Leopardo;
+import model.Lobo;
+import model.Peca;
+import model.Rato;
+import model.Tigre;
+import model.Toca;
 
 public class Controle implements Serializable {
 
